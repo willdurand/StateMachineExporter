@@ -1,5 +1,8 @@
 {
     "require": {
         "willdurand/propel-statemachine-behavior": "dev-master"
+    },
+    "autoload": {
+        "classmap": [ "src/" ]
     }
 }

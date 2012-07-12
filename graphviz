@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+if (count($argv) != 2) {
+    echo "Usage: $argv[0] schema.xml\n";
+    exit(1);
+}
+
+if (!is_file($file = $argv[1])) {
+    echo sprintf("Cannot open file \"%s\"\n", $file);
+    exit(2);
+}
+
+require __DIR__ . '/vendor/autoload.php';
+
+set_include_path(__DIR__ . '/vendor/phing/phing/classes' . PATH_SEPARATOR . get_include_path());
+set_include_path(__DIR__ . '/vendor/propel/propel1/generator/lib' . PATH_SEPARATOR . get_include_path());
+require_once __DIR__ . '/vendor/propel/propel1/generator/lib/builder/util/XmlToAppData.php';
+require_once __DIR__ . '/vendor/propel/propel1/generator/lib/config/QuickGeneratorConfig.php';
+
+$schema   = new \StateMachineExporter\Schema($file);
+$exporter = new \StateMachineExporter\DotExporter();
+$exporter->export($schema->getDatabase());
