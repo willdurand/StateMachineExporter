@@ -3,6 +3,6 @@
         "willdurand/propel-statemachine-behavior": "dev-master"
     },
     "autoload": {
-        "classmap": [ "src/" ]
+        "psr-0": { "StateMachineExporter": "src/" }
     }
 }
