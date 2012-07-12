@@ -4,9 +4,13 @@ StateMachineExporter
 The StateMachineExporter is a simple tool to quickly generate a Graphviz
 compatible file (`.dot` file) from a Propel XML schema, and the
 [StateMachineBehavior](https://github.com/willdurand/StateMachineBehavior).
+It can be useful to generate images of your state machines to show application's
+workflows (for example, in your internship report).
 
-This tool is provided as a `phar`, run the following command to generate a
-`.dot` file:
+This tool is provided as a `phar`, compiled using
+[Box](https://github.com/kherge/Box).
+
+Run the following command to generate a `.dot` file:
 
     php statemachine-exporter.phar [filename]
 
