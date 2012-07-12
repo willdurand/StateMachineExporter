@@ -1,0 +1,14 @@
+{
+    "algorithm": "SHA1",
+    "directories": [
+        "src/",
+        "vendor/"
+    ],
+    "files": [
+        "vendor/propel/propel1/generator/default.properties",
+        "graphviz"
+    ],
+    "main": "graphviz",
+    "output": "statemachine-exporter.phar",
+    "stub": true
+}
