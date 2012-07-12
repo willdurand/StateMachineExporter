@@ -29,7 +29,7 @@ PNG:
 
 Here is an example:
 
-![](resources/example.png)
+![](https://github.com/willdurand/StateMachineExporter/raw/master/resources/example.png)
 
 
 License
